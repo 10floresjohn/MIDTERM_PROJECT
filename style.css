@@ -1,3 +1,10 @@
+
+/* g code ni elias sa why*/
+.why-grid{display: grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:1rem;}
+.why-card {background: linear-gradient(180deg, rgba(176,198,212,0.12)), rgba(248,249,252, 0.4); padding: 18px; border: radius 28px; text-decoration:none;
+     min-height:140px; display:flex; flex-direction:column; gap:10px; align-items:center; justify-content:center;}
+.why-icon {font: size 1.6rem;}
+
 /* 
     HOME PAGE / AD / VISIT INFO - MICHAEL
     RENTALS / HOT PICKS - JAMES LLOYD
