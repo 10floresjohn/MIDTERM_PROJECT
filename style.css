@@ -260,3 +260,29 @@ body{
     color: #B0C6D4;
     font-size: 14px;
 }
+@media (max-width: 1024px){
+    .footer{
+        text-align: center;
+    }
+    .footer-container{
+        grid-template-columns: 1fr;
+        gap: 25px;
+        justify-content: center;
+    }
+    .footer-section{
+        width: 100%;
+        max-width: 400px;
+    }
+    .logo{
+        font-size: 24px;
+    }
+    .footer-section h3{
+        font-size: 16px;
+    }
+    .social-links{
+        justify-content: center;
+    }
+    .footer-bottom{
+        text-align: center;
+    }
+}
