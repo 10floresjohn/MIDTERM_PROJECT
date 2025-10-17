@@ -45,14 +45,59 @@ body{
     gap: 1rem;
 }
 .newsletter-text h2{
-    color: #0a2954;
+    color: #1E3765;
     font-size: 1.5rem;
 }
+
 .newsletter-text span{
     font-weight: 700;
 }
+
 .newsletter-text p{
     font-size: 0.95rem;
     color: #333;
     margin-top: 0.3rem
+}
+
+.newsletter-form{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.newsletter-form input[type="email"]{
+    padding: 0.7rem 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+    min-width: 230px;
+    outline: none;
+}
+
+.get-guide-btn{
+    background-color: #1E3765;
+    color: white;
+    padding: 0.7rem 1rem;
+    border-radius: 1px solid #ccc;
+    font-size: 0.95rem;
+    min-width: 230px;
+    outline: none;
+}
+
+.get-guide-btn:hover{
+    background-color: #B0C6D4;
+}
+
+#popup-toggle{
+    display: none;
+}
+
+.popup-overlay{
+    position:fixed;
+    inset: 0;
+    background: rgba(0,0,0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
 }
