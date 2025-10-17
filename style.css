@@ -37,6 +37,14 @@ body{
     background-attachment: fixed;
     overflow: hidden;
 }*/
+.newsletter-section {
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;   
+}
 .newsletter-container{
     background: rgba(255,255,255,0.9);
     border-radius: 12px;
@@ -87,8 +95,9 @@ body{
     padding: 0.7rem 1rem;
     border-radius: 6px;
     font-weight: 600;
-    min-width: 230px;
-    outline: none;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s;
 }
 
 .get-guide-btn:hover{
@@ -102,52 +111,53 @@ body{
 .popup-overlay{
     position:fixed;
     inset: 0;
-    background: rgba(0,0,0, 0.5);
+    backdrop-filter: blur(8px);
+    background: rgba(0,0,0, 0.45);
     display: none;
     justify-content: center;
     align-items: center;
     z-index: 100;
 }
 .popup-card{
-    background: #F8F9FC;
-    padding: 2rem;
-    border-radius: 12px;
+    background: rgba(255,255,255,0.92);
+    padding: 2.5rem;
+    border-radius: 16px;
     text-align: center;
-    max-width: 340px;
+    max-width: 600px;
     width: 90%;
-    box-shadow: 0 5px 20px rgba(0,0,0, 0.2);
-
+    box-shadow: 0 5px 25px rgba(0,0,0, 0.25);
+    backdrop-filter: blur(6px);
 }
 .popup-card h3{
     color:#1E3765;
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    margin-bottom: 0.7rem;
 }
 .popup-card p{
     color: #333;
-    font-size:1rem;
-    margin-bottom:1.2rem;
+    font-size:1.5rem;
+    margin-bottom:1.4rem;
     justify-content: center;
-    word-wrap: normal;
+    align-items: center;
 }
 
 .close-btn{
     display: inline-block;
     background: #1E3765;
     color: #fff;
-    padding: 0.7rem 1.2rem;
-    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
     border-radius: 6px;
     cursor: pointer;
-    transition: 0.3s;
-    margin-bottom: 1.2rem;
+    transition:0.3s;
+    font-size: 1rem;
 }
 .close-btn:hover {
     background-color: #1E3765;
 }
-#popup-toggle:checked~.popup-overlay{
+#popup-toggle:checked ~ .popup-overlay{
     display: flex;
 }
+
 @media(max-width: 700px){
     .newsletter-container{
         flex-direction: column;
