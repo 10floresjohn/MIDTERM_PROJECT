@@ -136,8 +136,7 @@ body{
     margin-bottom: 1.2rem;
 }
 .close-btn:hover {
-    background-color: #B0C6D4;
-    color: #1E3765;
+    background-color: #1E3765;
 }
 #popup-toggle:checked~.popup-overlay{
     display: flex;
@@ -225,7 +224,6 @@ body{
 .social-links{
     display: flex;
     gap: 15px;
-
 }
 .social-link{
     display: flex;
