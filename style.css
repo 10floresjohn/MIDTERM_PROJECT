@@ -25,23 +25,42 @@ body{
     line-height: 1.6;
     background-color: #F8F9FC;
 }
-/*newslwtter section*/
+/*newsletter section*/
 .newsletter-section{
-    background: url(https://github.com/10floresjohn/MIDTERM_PROJECT/blob/main/bg-newsletter.jpg)center/cover no-repeat;
-    padding: 2rem;
+    position: relative;
+    padding: 3rem 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    background: url(https://raw.githubusercontent.com/10floresjohn/MIDTERM_PROJECT/blob/main/bg-newsletter.jpg)no-repeat center center/cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.newsletter-section::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0, 0.4);
+    z-index: 1;
 }
 .newsletter-container{
+    position: relative;
+    z-index: 2;
     background: rgba(255,255,255,0.9);
     border-radius: 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width:100%;
+    max-width:1000px;
+    width:100%;
     padding: 1.5rem 2rem;
     gap: 1rem;
+   
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .newsletter-text h2{
     color: #1E3765;
@@ -154,6 +173,10 @@ body{
     .newsletter-form input[type="email"],
     .get-guide-btn{
         width: 100%;
+    }
+    .newsletter-section{
+        background-attachment: scroll;
+        background-position: center top;
     }
 }
 /*Footer Css*/
