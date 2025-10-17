@@ -109,35 +109,35 @@ body{
     max-width: 340px;
     width: 90%;
     box-shadow: 0 5px 20px rgba(0,0,0, 0.2);
+
 }
 .popup-card h3{
     color:#1E3765;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
 }
 .popup-card p{
     color: #333;
-    font-size:0.95rem;
+    font-size:1rem;
     margin-bottom:1.2rem;
+    justify-content: center;
+    word-wrap: normal;
 }
-.close-btn{
-    display:inline-block;
-    background: #1E3765;
-    color: #fff;
-    padding: 0.6rem 1.2rem;
-    border-radius: 6px;
-    margin-bottom:1.2rem;
-}
+
 .close-btn{
     display: inline-block;
     background: #1E3765;
     color: #fff;
-    padding: 0.6rem 1.2rem;
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 6px;
     cursor: pointer;
     transition: 0.3s;
+    margin-bottom: 1.2rem;
 }
 .close-btn:hover {
     background-color: #B0C6D4;
+    color: #1E3765;
 }
 #popup-toggle:checked~.popup-overlay{
     display: flex;
@@ -215,14 +215,9 @@ body{
 }
 .footer-section a:hover{
     color: #F8F9FC;
-    text-decoration: underline;
+    text-decoration:underline;
 }
-.contact.label{
-    display: inline-block;
-    font-weight: 600;
-    color: #F8F9FC;
-    margin-bottom: 5px;
-}
+
 .contact ul li{
     display: flex;
     flex-direction: column;
@@ -230,6 +225,7 @@ body{
 .social-links{
     display: flex;
     gap: 15px;
+
 }
 .social-link{
     display: flex;
