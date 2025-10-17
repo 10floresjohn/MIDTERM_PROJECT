@@ -4,6 +4,232 @@
     RENTALS / HOT PICKS - JAMES LLOYD
     OVERVIEW - ISAIAH
 */
+
+/* code ni tac-an*/
+.section {
+    padding: 3rem 0;
+}
+
+/* Theme Color Updates */
+.section-gray {
+    background-color: #f0f0f0; /* Keeping a light tone for contrast */
+}
+
+.section-beige {
+    background-color: #ADD8E6; /* Pastel Blue */
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-style: italic;
+    color: #1a1a1a; /* Black/Dark Gray title */
+}
+
+/* Tour Cards */
+.tour-grid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 1.5rem;
+}
+
+.tour-card {
+    background: white; /* White background for cards */
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+    /* Added Flexbox to ensure consistent card heights */
+    display: flex;
+    flex-direction: column;
+}
+
+.tour-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.tour-image {
+    position: relative;
+    height: 12rem;
+    overflow: hidden;
+}
+
+.tour-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.tour-card:hover .tour-image img {
+    transform: scale(1.1);
+}
+
+.tour-content {
+    padding: 1rem;
+    /* 💡 FIX: Use flex-grow to make sure tour-content expands 
+       and justify-content to push the button to the bottom */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.tour-title {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+}
+
+.tour-description {
+    font-size: 0.875rem;
+    color: #4b5563; /* Slightly lighter gray */
+    margin-bottom: 0.75rem;
+    /* 💡 FIX: Allows description to take up available space before the footer/button */
+    flex-grow: 1; 
+}
+
+.tour-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #94a3b8;
+    margin-top: auto; /* Pushes the footer just above the button if needed */
+}
+
+/* Responsive Grid Adjustments */
+
+/* Small screens (min-width: 640px) - Show 2 columns */
+@media (min-width: 640px) {
+    .tour-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Medium screens (min-width: 768px) - Show 3 columns */
+@media (min-width: 768px) {
+    .tour-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Large screens (min-width: 1024px) - Show 4 columns */
+@media (min-width: 1024px) {
+    .tour-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Rent Button & Popup Styles */
+
+/* Rent Button */
+.rent-btn {
+    display: inline-block;
+    margin-top: 12px;
+    background-color: #007bff; /* Regular Blue */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+.rent-btn:hover {
+    background-color: #0056b3; /* Darker blue when hovered */
+    transform: translateY(-2px);
+}
+
+/* Popup Container */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8); /* Darkened overlay */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.popup:target {
+    display: flex;
+}
+
+/* Popup Content */
+.popup-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+    color: #1a1a1a;
+}
+
+.popup-content h2 {
+    margin-bottom: 1rem;
+}
+
+.popup-content label {
+    display: block;
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.popup-content input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    color: #1a1a1a;
+}
+
+/* Book Now Button */
+.book-now {
+    background-color: #007bff; /* Changed to Regular Blue for consistency */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.book-now:hover {
+    background-color: #0056b3;
+}
+
+/* Close Button */
+.close {
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: #ff5555; /* Use a bright red for close */
+    font-weight: 600;
+}
+
+.close:hover {
+    color: #cc0000;
+}
+
+/* Animation for Popup */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+
 /* g code ni elias sa why*/
 .why-grid{display: grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:1rem;}
 .why-card {background: linear-gradient(180deg, rgba(176,198,212,0.12)), rgba(248,249,252, 0.4); padding: 18px; border: radius 28px; text-decoration:none;
