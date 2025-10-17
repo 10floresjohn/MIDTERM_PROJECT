@@ -27,9 +27,8 @@ body{
 }
 /*newslwtter section*/
 .newsletter-section{
-    background:
-    /*need bg pic*/
-    padding 2rem;
+    background: url(https://github.com/10floresjohn/MIDTERM_PROJECT/blob/main/bg-newsletter.jpg)center/cover no-repeat;
+    padding: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
