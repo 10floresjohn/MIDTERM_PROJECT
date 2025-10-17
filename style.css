@@ -1,4 +1,9 @@
 
+/*
+    HOME PAGE / AD / VISIT INFO - MICHAEL
+    RENTALS / HOT PICKS - JAMES LLOYD
+    OVERVIEW - ISAIAH
+*/
 /* g code ni elias sa why*/
 .why-grid{display: grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:1rem;}
 .why-card {background: linear-gradient(180deg, rgba(176,198,212,0.12)), rgba(248,249,252, 0.4); padding: 18px; border: radius 28px; text-decoration:none;
@@ -6,9 +11,22 @@
 .why-icon {font: size 1.6rem;}
 
 /* 
-    HOME PAGE / AD / VISIT INFO - MICHAEL
-    RENTALS / HOT PICKS - JAMES LLOYD
-    OVERVIEW - ISAIAH
     LATEST POST / REVIEW - LJ
-    ABOVE FOOTER / CONTACT DETAILS - GRACE
+    NEWSLETTER / CONTACT DETAILS/ FOOTER - GRACE
 */
+/* general reset & base: for grace part*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    line-height: 1.6;
+    background-color: #F8F9FC;
+}
+/*newslwtter section*/
+.newsletter-section{
+    background:
+
+}
