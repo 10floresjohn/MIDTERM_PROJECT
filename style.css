@@ -28,5 +28,31 @@ body{
 /*newslwtter section*/
 .newsletter-section{
     background:
-
+    /*need bg pic*/
+    padding 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.newsletter-container{
+    background: rgba(255,255,255,0.9);
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width:100%;
+    padding: 1.5rem 2rem;
+    gap: 1rem;
+}
+.newsletter-text h2{
+    color: #0a2954;
+    font-size: 1.5rem;
+}
+.newsletter-text span{
+    font-weight: 700;
+}
+.newsletter-text p{
+    font-size: 0.95rem;
+    color: #333;
+    margin-top: 0.3rem
 }
