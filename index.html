@@ -8,15 +8,75 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    Tryy daw Graceeeeeeeeeeeeeeeeeee
 
     <!-- HOME PAGE / AD / VISIT INFO(MICHAEL) -->
+     <!-- Header -->
+<!-- Header -->
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <div class="logo-mark">
+        <img src="LOGO.png">
+      </div>
+      <div class="logo-text">
+        <span class="brand-name">CoastalEase</span>
+        <small class="brand-sub">Dalaguete Beach Park</small>
+      </div>
+    </div>
+
+    <input id="nav-toggle" class="nav-toggle" type="checkbox" aria-label="menu toggle" />
+    <nav class="nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#rentals">Rentals</a></li>
+        <li><a href="#posts">Posts</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <label for="nav-toggle" class="hamburger" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </label>
+  </div>
+</header>
+
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <h1>Discover Dalaguete Beach Park</h1>
+    <p>Tables • Kayaks • Event Spaces — easy online booking for your perfect seaside day.</p>
+    <div class="hero-actions">
+      <a href="#featured" class="btn btn-primary">See Hot Picks</a>
+      <a href="#rentals" class="btn btn-secondary">Explore All</a>
+    </div>
+  </div>
+  
+<div class="hero-bottom-text">
+    <p>ENTRANCE FEE Adult: ₱30 Children (6-12): ₱15 Children (0-5): FreePWD / Senior Citizen: Free (present valid ID)</p>
+  </div>
+  <div class="hero-bottom-text">
+</section>
+
+
+  <!-- Ad banner -->
+  <section class="ad-banner">
+    <div class="container">
+      <div class="ad-inner">
+        <img src="Ad.jpg"
+             alt="promo banner" />
+      </div>
+    </div>
+  </section>
+
     <!-- RENTALS/ HOT PICKS(JAMES LLOYD) -->
+<section id="featured" class="section-gray">
      <section class="section section-gray">
         <div class="container">
             <h2 class="section-title">Hot Sellers</h2>
             <div class="tour-grid">
-
                 <div class="tour-card">
                     <div class="tour-image">
                         <img src="hot event place.jpg" alt="Event Place">
@@ -32,7 +92,7 @@
                         <a href="#book1" class="rent-btn">Book</a>
                     </div>
                 </div>
-
+            
                 <div class="tour-card">
                     <div class="tour-image">
                         <img src="eventplace2.jpg" alt="Event Place">
@@ -48,7 +108,7 @@
                         <a href="#book2" class="rent-btn">Book</a>
                     </div>
                 </div>
-
+            
                 <div class="tour-card">
                     <div class="tour-image">
                         <img src="Kayakno1.png" alt="Kayak">
@@ -84,7 +144,8 @@
             </div>
         </div>
     </section>
-
+</section>
+<section id="rentals" class="section explore"></section>
     <section class="section section-beige">
         <div class="container">
             <h2 class="section-title">Book us Now on Dalaguete Beach Park</h2>
@@ -222,7 +283,7 @@
             </div>
         </div>
     </section>
-
+</section>
     <div id="book1" class="popup">
         <div class="popup-content">
             <h2>Book Your Rental</h2>
@@ -408,22 +469,23 @@
 
     
     <!-- OVERVIEW(ELIAS) -->
+<section id="overview" class="section featured"></section>
     <section class="section section-why">
         <div class="why-overlay"></div>
         <div class="container why-container">
             <h2 class="section-title">Why book with us?</h2>
             <div class="why-grid">
-                <div class="why-item">
+                <div class="why-card">
                     <div class="why-icon">💰</div>
                     <h3 class="why-title">Best Price</h3>
                     <p class="why-description">Enjoy the best value for your money with our unbeatable price guarantee, giving you quality experiences without overspending. We ensure transparency and affordability, so you can travel smart and stress-free.
-                </di>
-                <div class="why-item">
+                </div>
+                <div class="why-card">
                     <div class="why-icon">🏖</div>
                     <h3 class="why-title">Hand Picked Destination</h3>
                     <p class="why-description">Enjoy the best value for your money with our unbeatable price guarantee, giving you quality experiences without overspending. We ensure transparency and affordability, so you can travel smart and stress-free.
                 </div>
-                <div clas="why-item">
+                <div class="why-card">
                     <div class="why-icon">📧</div>
                     <h3 class="why-title">24hours Customer Care</h3>
                     <p class="why-desciption">Travel with confidence knowing our friendly customer care team is available 24/7 to assist you. From bookings to emergencies, we’re always ready to ensure your journey is smooth and worry-free.
@@ -431,6 +493,7 @@
             </div>
         </div>
     </section>
+</section>
                             
 
 
@@ -439,11 +502,13 @@
       <div class="grid">
         <!-- Latest Post Section -->
         <section class="section">
+        <section id="posts" class="section posts"></section>
           <h1 class="section-title">Latest Post</h1>
           <article class="blog-card">
             <div class="blog-image">
               <img src="beach.jpg" alt="Dalaguete Beach Park">
             </div>
+            
             <div class="blog-content">
               <h2 class="blog-title">DALAGUETE BEACH PARK IN CEBU PROVINCE, PHILIPPINES</h2>
               <p class="blog-text">
@@ -455,7 +520,7 @@
               </p>
               <input type="checkbox" id="modal-toggle" class="modal-toggle">
               <label for="modal-toggle" class="btn">READ MORE</label>
-              
+            </section>
               <!-- Modal -->
               <div class="modal-overlay">
                 <div class="modal">
@@ -548,6 +613,7 @@
             <label for="popup-toggle" class="close-btn">Close</label>
         </div>
     </div>
+<footer id="contact" class="footer"></footer>
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-section brand">
@@ -610,7 +676,7 @@
             <p>&copy;2025 CoastalEase. All rights reserved</p>
         </div>
     </footer>
-
+</footer>
 
 </body>
 </html>

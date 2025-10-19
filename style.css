@@ -4,6 +4,157 @@
     RENTALS / HOT PICKS - JAMES LLOYD
     OVERVIEW - ISAIAH
 */
+/*code ni JM*/
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --regal: #1E3765;
+  --pastel: #B0C6D4;
+  --white-lilac: #F8F9FC;
+  --black: #000000;
+  --container: 1200px;
+}
+html { scroll-behavior: smooth; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background: var(--white-lilac); color: var(--black); }
+.container { width: 92%; max-width: var(--container); margin: 0 auto; }
+
+/* Header */
+.site-header { position: sticky; top: 0; z-index: 60; background: linear-gradient(180deg, rgba(30,55,101,0.98), rgba(30,55,101,0.98)); box-shadow: 0 2px 6px rgba(0,0,0,0.12); }
+.header-inner { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:0.9rem 0; }
+.brand { display:flex; align-items:center; gap:0.6rem; color:#fff; }
+.logo-mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  overflow: hidden; /* keeps image corners rounded */
+}
+
+.logo-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ensures it fills nicely */
+}
+
+.logo-text .brand-name{ font-weight:700; font-size:1.05rem; color:#fff; }
+.logo-text .brand-sub{ display:block; font-size:0.68rem; opacity:0.9; margin-top:2px; color:#fff; }
+
+/* nav list */
+.nav ul { list-style:none; display:flex; gap:1rem; align-items:center; }
+.nav a { color:#fff; text-decoration:none; padding:6px 8px; font-weight:600; transition: color .18s; }
+.nav a:hover { color: var(--pastel); }
+
+/* CTA */
+.btn-cta { background: var(--pastel); color: var(--regal); text-decoration:none; padding:8px 14px; border-radius:20px; font-weight:700; }
+
+/* Hamburger Menu (Centered and Balanced X Animation) */
+.nav-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-left: 12px;
+  background: #1E3765; /* Regal Blue */
+  transition: 0.3s ease;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 22px;
+  background: #F8F9FC; /* White Lilac */
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+/* X animation — fixed center alignment */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(3px, 3px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(3px, -3px);
+}
+
+/* Show hamburger only on mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Optional: show hamburger on small screens */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Hero */
+.hero { min-height: 78vh; display:flex; align-items:center; position:relative; overflow:hidden; margin-top:0; }
+.hero::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image: url("Homepagebg.jpg");
+  background-size: cover; background-position:center;
+  filter: contrast(1.02) saturate(1.05);
+  transform: scale(1.02);
+}
+.hero {
+  position: relative;
+  z-index: 0;
+}
+
+.hero::before {
+  z-index: -1; /* not -2 */
+}
+
+.hero-overlay { position:absolute; inset:0; background: linear-gradient(180deg, rgba(30,55,101,0.55), rgba(30,55,101,0.5)); z-index:0; }
+.hero-content { position:relative; z-index:1; text-align:center; width:100%; padding:4rem 1rem; color:#fff; }
+.hero-content h1 { font-size:2.6rem; margin-bottom:0.6rem; letter-spacing:0.6px; }
+.hero-content p { font-size:1.05rem; margin-bottom:1.2rem; opacity:0.95; max-width:900px; margin-left:auto; margin-right:auto; }
+.hero-actions { display:flex; gap:0.8rem; justify-content:center; flex-wrap:wrap; }
+
+.hero-bottom-text {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+}
+
+/* buttons */
+.btn { display:inline-block; border-radius:28px; padding:10px 18px; font-weight:700; text-decoration:none; }
+.btn-primary { background: var(--pastel); color: var(--regal); }
+.btn-secondary { background: rgba(255,255,255,0.12); color: #fff; border: 1px solid rgba(255,255,255,0.12); }
+
+/* ad banner */
+.ad-banner { padding: 1.2rem 0; }
+.ad-inner img { width:100%; border-radius:10px; display:block; }
+
 
 /* code ni tac-an*/
 .section {
@@ -211,10 +362,53 @@
 
 
 /* g code ni elias sa why*/
-.why-grid{display: grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:1rem;}
-.why-card {background: linear-gradient(180deg, rgba(176,198,212,0.12)), rgba(248,249,252, 0.4); padding: 18px; border: radius 28px; text-decoration:none;
-     min-height:140px; display:flex; flex-direction:column; gap:10px; align-items:center; justify-content:center;}
-.why-icon {font: size 1.6rem;}
+.section-why {
+  padding: 4rem 2rem; /* adds space inside the section */
+  background-color: #f9fafb; /* light background for contrast */
+}
+
+.why-container {
+  max-width: 1200px;
+  margin: 0 auto; /* centers the content */
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.why-card {
+  background: white;
+  border: 2px solid #cbd5e1; /* <-- adds the border */
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-decoration: none;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Slight hover effect */
+.why-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  border-color: #3b82f6;
+}
+
 
 /* 
     LATEST POST / REVIEW - LJ
