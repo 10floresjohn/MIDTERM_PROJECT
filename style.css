@@ -451,9 +451,16 @@ html { scroll-behavior: smooth; font-family: system-ui, -apple-system, "Segoe UI
 }
 
 
-/* 
-    LATEST POST / REVIEW - LJ
-    * {
+/* Color Palette */
+:root {
+  --regal-blue: #1E3765;
+  --pastel-blue: #B0C6D4;
+  --white-lilac: #F8F9FC;
+  --black: #000000;
+  --cream-bg: #E8DCC4;
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -461,8 +468,8 @@ html { scroll-behavior: smooth; font-family: system-ui, -apple-system, "Segoe UI
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #E8DCC4;
-  color: #000000;
+  background-color: var(--cream-bg);
+  color: var(--black);
   line-height: 1.6;
 }
 
@@ -487,14 +494,14 @@ body {
 .section-title {
   font-size: 2.5rem;
   font-style: italic;
-  color: #000000;
+  color: var(--black);
   margin-bottom: 2rem;
   font-weight: 700;
 }
 
 /* Blog Card */
 .blog-card {
-  background: #F8F9FC;
+  background: var(--white-lilac);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -529,21 +536,21 @@ body {
 .blog-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #1E3765;
+  color: var(--regal-blue);
   margin-bottom: 1rem;
   letter-spacing: 0.5px;
 }
 
 .blog-text {
-  color: #1E3765;
+  color: var(--regal-blue);
   opacity: 0.8;
   margin-bottom: 1.5rem;
   line-height: 1.8;
 }
 
 .btn {
-  background-color: #1E3765;
-  color: #F8F9FC;
+  background-color: var(--regal-blue);
+  color: var(--white-lilac);
   border: none;
   padding: 0.75rem 2rem;
   font-size: 0.875rem;
@@ -589,7 +596,7 @@ body {
 }
 
 .modal {
-  background: #F8F9FC;
+  background: var(--white-lilac);
   border-radius: 12px;
   padding: 2.5rem;
   max-width: 600px;
@@ -610,7 +617,7 @@ body {
   top: 1rem;
   right: 1rem;
   font-size: 1.5rem;
-  color: #1E3765;
+  color: var(--regal-blue);
   cursor: pointer;
   background: none;
   border: none;
@@ -630,21 +637,21 @@ body {
 .modal-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #1E3765;
+  color: var(--regal-blue);
   margin-bottom: 1.5rem;
   letter-spacing: 0.5px;
   padding-right: 2rem;
 }
 
 .modal-text {
-  color: #1E3765;
+  color: var(--regal-blue);
   opacity: 0.8;
   line-height: 1.8;
   margin-bottom: 1rem;
 }
 
 .modal-cta {
-  color: #1E3765;
+  color: var(--regal-blue);
   font-weight: 600;
   margin-top: 1.5rem;
   padding-top: 1.5rem;
@@ -659,7 +666,7 @@ body {
 }
 
 .review-card {
-  background: #F8F9FC;
+  background: var(--white-lilac);
   border-radius: 12px;
   padding: 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -678,7 +685,7 @@ body {
 .avatar {
   width: 4rem;
   height: 4rem;
-  background-color: #B0C6D4;
+  background-color: var(--pastel-blue);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -695,13 +702,13 @@ body {
 .review-title {
   font-size: 1.125rem;
   font-weight: 700;
-  color: #000000;
+  color: var(--black);
   margin-bottom: 0.5rem;
 }
 
 .review-text {
   font-size: 0.875rem;
-  color: #1E3765;
+  color: var(--regal-blue);
   opacity: 0.8;
   line-height: 1.6;
   margin-bottom: 0.75rem;
@@ -712,6 +719,10 @@ body {
   font-size: 1rem;
   letter-spacing: 2px;
 }
+
+
+
+
 
    /* NEWSLETTER / CONTACT DETAILS/ FOOTER - GRACE
 */
@@ -906,19 +917,35 @@ body{
   color: #F8F9FC;
 }
 
+.logo-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center;  
+}
+
+.footer-section.brand {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; /* Align to left (use center if you prefer center alignment) */
+}
+
 .logo {
   font-size: 28px;
   font-weight: 700;
   letter-spacing: 1px;
   color: #B0C6D4;
+  margin-bottom: 8px; /* Adds spacing between logo and text */
 }
 
 .description {
   color: #B0C6D4;
   line-height: 1.8;
   font-size: 14px;
-  justify-content: center;
+  max-width: 300px; /* Optional: controls text width */
 }
+
+
 
 .footer-section h3 {
   font-size: 18px;
@@ -1048,4 +1075,5 @@ body{
   .footer-bottom {
     text-align: center;
   }
+  
 }
