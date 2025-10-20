@@ -162,11 +162,11 @@ html { scroll-behavior: smooth; font-family: system-ui, -apple-system, "Segoe UI
 }
 
 .section-gray {
-    background-color: #f0f0f0;
+    background-color: #F8F9FC;
 }
 
 .section-beige {
-    background-color: #ADD8E6;
+    background-color: #F8F9FC;
 }
 
 .section-title {
@@ -265,7 +265,7 @@ html { scroll-behavior: smooth; font-family: system-ui, -apple-system, "Segoe UI
 .rent-btn {
     display: inline-block;
     margin-top: 12px;
-    background-color: #007bff;
+    background-color: #1E3765;
     color: #ffffff;
     text-decoration: none;
     padding: 10px 18px;
@@ -276,7 +276,7 @@ html { scroll-behavior: smooth; font-family: system-ui, -apple-system, "Segoe UI
 }
 
 .rent-btn:hover {
-    background-color: #0056b3; 
+    background-color: #1E3765; 
     transform: translateY(-2px);
 }
 
@@ -329,7 +329,7 @@ html { scroll-behavior: smooth; font-family: system-ui, -apple-system, "Segoe UI
 }
 
 .book-now {
-    background-color: #007bff; 
+    background-color: #1E3765; 
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -340,19 +340,19 @@ html { scroll-behavior: smooth; font-family: system-ui, -apple-system, "Segoe UI
 }
 
 .book-now:hover {
-    background-color: #0056b3;
+    background-color: #1E3765;
 }
 
 .close {
     display: inline-block;
     margin-top: 1rem;
     text-decoration: none;
-    color: #ff5555;
+    color: #000000;
     font-weight: 600;
 }
 
 .close:hover {
-    color: #cc0000;
+    color: #000000;
 }
 
 @keyframes fadeIn {
@@ -364,26 +364,40 @@ html { scroll-behavior: smooth; font-family: system-ui, -apple-system, "Segoe UI
 /* g code ni elias sa why*/
 .section-why {
   padding: 4rem 2rem; /* adds space inside the section */
-  background-color: #f9fafb; /* light background for contrast */
+  background-color: #F8F9FC; /* light background for contrast */
 }
 
 .why-container {
   max-width: 1200px;
   margin: 0 auto; /* centers the content */
   text-align: center;
+  justify-content: center;
 }
 
 .section-title {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 2rem;
-  color: #333;
+  color: #1E3765;
+}
+
+.section-title:after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 4px;
+  background-color: #B0C6D4;
+  margin: 15px auto 0;
+  border-radius: 2px;
+
 }
 
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .why-card {
@@ -402,11 +416,38 @@ html { scroll-behavior: smooth; font-family: system-ui, -apple-system, "Segoe UI
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
+.why-icon {
+  font-size: 3.2rem;
+  color: #1E3765;
+  margin-bottom: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.why-item:hover .why-icon {
+  color: #B0C6D4
+  transform: scale(1.15)
+}
 /* Slight hover effect */
 .why-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   border-color: #3b82f6;
+}
+.why-description{
+  font-size: 1rem;
+  color: #000000;
+  line-height: 1.7;
+  padding: 0 5px;
+}
+.why-title{
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1E3765;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+.why-item:hover .why-title{
+  color: #B0C6D4;
 }
 
 
