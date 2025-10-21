@@ -126,13 +126,14 @@ html { scroll-behavior: smooth; font-family: system-ui, -apple-system, "Segoe UI
 }
 
 /* Hero */
-.hero { min-height: 78vh; display:flex; align-items:center; position:relative; overflow:hidden; margin-top:0; }
+.hero { min-height: 90vh; display:flex; align-items:center; position:relative; overflow:hidden; margin-top:0; }
 .hero::before {
   content:"";
   position:absolute;
   inset:0;
-  background-image: url("Homepagebg.jpg");
-  background-size: cover; background-position:center;
+  background-image: url("HomeBG.jpg");
+  background-size:100%;
+  background-position:center;
   filter: contrast(1.02) saturate(1.05);
   transform: scale(1.02);
 }
@@ -157,7 +158,7 @@ html { scroll-behavior: smooth; font-family: system-ui, -apple-system, "Segoe UI
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
-  font-size: 0.95rem;
+  font-size: 1.3rem;
   opacity: 0.9;
   text-align: center;
   width: 100%;
@@ -171,7 +172,12 @@ html { scroll-behavior: smooth; font-family: system-ui, -apple-system, "Segoe UI
 
 /* ad banner */
 .ad-banner { padding: 1.2rem 0; }
-.ad-inner img { width:100%; border-radius:10px; display:block; }
+.ad-inner img { 
+    width:100%;
+    max-block-size: 100px;
+    min-block-size: 90px;
+    flex-wrap: wrap;
+    border-radius:10px; display:flex; }
 
 /* Newsletter / Footer (Grace) */
 .newsletter-section {
