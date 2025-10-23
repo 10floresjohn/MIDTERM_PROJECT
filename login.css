@@ -94,21 +94,21 @@ p {
 }
 
 header {
-  background: #667eea;
-  color: white;
+  background: #1E3675;
+  color: #0000;
   padding: 1rem 0;
   border-radius: 8px;
   margin-bottom: 2rem;
 }
 
 a.button {
-  background: #667eea;
-  color: white;
+  background: #B0C6D4;
+  color: #0000;
   padding: 0.7rem 1.2rem;
   text-decoration: none;
   border-radius: 6px;
 }
 
 a.button:hover {
-  background: #5a67d8;
+  background: #B0C6D4;
 }

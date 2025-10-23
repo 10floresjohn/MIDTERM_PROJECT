@@ -136,8 +136,8 @@ html { scroll-behavior: smooth; font-family: system-ui, -apple-system, "Segoe UI
 
 .hero-overlay { position:absolute; inset:0; background: linear-gradient(180deg, rgba(30,55,101,0.55), rgba(30,55,101,0.5)); z-index:0; }
 .hero-content { position:relative; z-index:1; text-align:center; width:100%; padding:4rem 1rem; color:#fff; }
-.hero-content h1 { font-size:2.6rem; margin-bottom:0.6rem; letter-spacing:0.6px; }
-.hero-content p { font-size:1.05rem; margin-bottom:1.2rem; opacity:0.95; max-width:900px; margin-left:auto; margin-right:auto; }
+.hero-content h1 { font-size:4rem; margin-bottom:0.6rem; letter-spacing:0.6px; }
+.hero-content p { font-size:1.2rem; margin-bottom:1.2rem; opacity:0.95; max-width:900px; margin-left:auto; margin-right:auto; }
 .hero-actions { display:flex; gap:0.8rem; justify-content:center; flex-wrap:wrap; }
 
 @media (max-width: 768px) {
@@ -150,9 +150,12 @@ html { scroll-behavior: smooth; font-family: system-ui, -apple-system, "Segoe UI
 
 
 /* buttons */
-.btn { display:inline-block; border-radius:28px; padding:10px 18px; font-weight:700; text-decoration:none; }
-.btn-primary { background: var(--pastel); color: var(--regal); }
-.btn-secondary { background: rgba(255,255,255,0.12); color: #fff; border: 1px solid rgba(255,255,255,0.12); }
+.btn { display:inline-block; border-radius:28px; padding:18px 20px; font-weight:700; text-decoration:none; }
+.btn-primary { background: var(--regal); color: var(  --white-lilac); }
+.btn-primary:hover{ 
+  background: #B0C6D4;
+}
+
 
 /* ad banner */
 .ad-banner { padding: 1.2rem 0; }
